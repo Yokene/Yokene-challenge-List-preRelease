@@ -1,0 +1,131 @@
+body{
+    position: relative; /* Необходимо для абсолютного позиционирования элемента .back */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    background-size: cover;
+    background: linear-gradient(90deg, rgb(216, 216, 216) 0%, rgba(175, 175, 175, 1) 50%, rgba(101, 101, 101, 1));
+}
+
+html{
+    box-sizing: border-box;
+}
+img{
+    width: 450px;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.container{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    flex-basis: 650px;
+    height: 710px;
+    padding: 20px 35px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: solid 0.1px #fafafa;
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.4);
+}
+
+.text{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+P{
+    font-size: 20px;
+}
+
+.info{
+    background: rgba(255, 255, 255, 0.322);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    flex-basis: 650px;
+    height: 350px;
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.2);
+}
+
+.info-txt{
+    background: rgba(211, 211, 211, 0.521);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    font-size: 40px;
+    border-radius: 20px;
+    padding-top: 10px;
+    margin: 0;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.3);
+}
+
+.txt{
+    font-size: 30px;
+}
+
+.back {
+    position: absolute;
+    top: 20px; /* Задает расстояние от верхнего края */
+    left: 20px; /* Задает расстояние от правого края */
+}
+
+button{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    border: solid 0.1px #fafafa;
+}
+
+.back-txt{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: #e7e7e7;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 900px) {
+    .info{
+        width: 300px;
+        text-align: center;
+        flex-basis: 400px;
+        font-size: 10px;
+        height: 360px;
+    }
+
+    .container{
+        flex-basis: 300px;
+        padding: 10px 15px;
+        width: 100px;
+        height: 600px;
+    }
+
+    .text{
+        font-size: 25px;
+    }
+
+    img{
+        width: 250px;
+        padding-top: 10px;
+    }
+
+    p{
+        margin: 15px;
+        font-size: 17px;
+    }
+
+    button{
+        width: 50px;
+        height: 50px;
+    }
+
+}

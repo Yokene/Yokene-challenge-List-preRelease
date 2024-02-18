@@ -1,0 +1,164 @@
+body{
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    background-size: cover;
+    background: linear-gradient(90deg, rgb(216, 216, 216) 0%, rgba(175, 175, 175, 1) 50%, rgba(101, 101, 101, 1));
+}
+
+html, body{
+    height: 100%;
+}
+
+.challenge-place{
+    display: flex;
+    flex-basis: 400px;
+    background: linear-gradient(70deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 50%, rgba(218,218,218,1) 100%);
+    margin: 20px 140px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; /* Добавлено */
+    overflow: hidden; /* Добавлено */
+    transition: transform 0.3s ease; /* Добавлено */
+}
+
+.info-txt{
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(70deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 50%, rgba(218,218,218,1) 100%);
+    margin: 20px 140px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.4);
+}
+
+.info-main{
+    font-size: 24px;
+    text-shadow: 0 2px 15px rgba(35, 35, 35, 0.2);
+}
+
+img{
+    width: 200px;
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.4);
+}
+
+.text {
+    display: flex; /* Добавлено */
+    align-items: center; /* Добавлено */
+    justify-content: center; /* Добавлено */
+    padding-left: 150px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.challenge-place::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    transition: all 0.3s ease; /* Добавлено */
+}
+
+.challenge-place:hover::before {
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+}
+
+.challenge-place:hover {
+    transform: scale(0.95); /* Уменьшаем на 5% при наведении */
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.3);
+    background-color: rgb(231, 231, 231);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: contents;
+}
+
+.secret{
+    opacity: 0;
+    padding: 0;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .challenge-place {
+        flex-basis: calc(100% - 40px); /* Растягиваем элемент на всю ширину с отступами по 20px */
+        margin-left: 30px; /* Устанавливаем отступы по 20px со всех сторон */
+        margin-right: 30px;
+        padding: 20px; /* Уменьшаем отступы внутри элемента */
+    }
+    
+    .text {
+        padding-left: 30px; /* Уменьшаем отступ слева */
+        font-size: 20px; /* Уменьшаем размер текста */
+    }
+    
+    img {
+        width: 100px;
+        height: auto; /* Уменьшаем ширину изображений */
+
+    }
+
+    .info-txt{
+        font-size: 14px;
+        margin: 30px;
+    }
+
+    .info-main{
+        font-size: 20px;
+    }
+
+}
+.nav-btn {
+    width: 350px;
+    height: 35px;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: solid 0.1px #fafafa;
+    background-color: rgb(243, 243, 243);
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавлено */
+}
+
+
+.nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.3);
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+.nav-btn a{
+    color: inherit; /* Использовать цвет, унаследованный от родительского элемента */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+.links{
+    text-decoration: none;
+}
+
+.nav{
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    .nav-btn {
+        width: 180px; /* Уменьшаем ширину кнопок на мобильных устройствах */
+        height: 30px; /* Уменьшаем высоту кнопок на мобильных устройствах */
+        margin: 5px;
+        font-size: 15px; /* Уменьшаем размер шрифта на мобильных устройствах */
+    }
+
+    .special-btn{
+        width: 150px;
+    }
+}
